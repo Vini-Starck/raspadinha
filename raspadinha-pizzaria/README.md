@@ -1,69 +1,80 @@
-# React + TypeScript + Vite
+# Pizza Scratch 🍕
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Sobre
 
-Currently, two official plugins are available:
+Pizza Scratch é um site interativo de raspadinha digital, criado para promover promoções especiais em pizzarias. Os usuários podem “raspar” a área designada para revelar descontos exclusivos e vantagens para sua próxima pizza. O objetivo é engajar clientes de forma divertida, incentivando o consumo e fidelização.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Raspadinha digital:** Área interativa para raspar com o mouse ou toque, revelando cupons.
+- **Design responsivo:** Layout adaptável para celulares, tablets e desktops.
+- **Componentização:** Uso de React para estrutura modular, facilitando manutenção e escalabilidade.
+- **Footer e Header personalizados:** Informações claras, com identidade visual consistente.
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Tecnologias Utilizadas
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- React + TypeScript
+- Tailwind CSS para estilização rápida e responsiva
+- React Icons para ícones (opcional)
+- Vite (opcional, para bundling e dev server)
+- Componente personalizado `ScratchCard` para a funcionalidade da raspadinha
+
+---
+
+## Estrutura do Projeto
+
+/src
+
+/components
+
+Header.tsx
+
+Footer.tsx
+
+ScratchCard.tsx
+
+App.tsx
+
+---
+
+## Como Rodar Localmente
+
+1. Clone o repositório:
+
+```bash
+git clone https://github.com/seu-usuario/pizza-scratch.git
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Instale as dependências:
+```bash
+npm install
+# ou
+yarn install
 ```
+
+3. Rode o projeto em modo de desenvolvimento:
+
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+4. Abra o navegador em http://localhost:3000 (ou porta configurada)
+
+---
+
+## Personalização
+
+- Ajuste a porcentagem de desconto modificando o texto no componente principal.
+- Altere as cores no arquivo Tailwind ou inline para melhor adequar à identidade da pizzaria.
+- Implemente integração com backend para cupons reais, notificações e estatísticas.
+
+## Autor
+
+**[Vinícius Starck](https://starck-portifolio.web.app/)**
+
