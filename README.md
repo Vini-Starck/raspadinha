@@ -46,7 +46,7 @@ App.tsx
 1. Clone o repositório:
 
 ```bash
-git clone https://github.com/seu-usuario/pizza-scratch.git
+git clone https://github.com/Vini-Starck/raspadinha.git
 ```
 
 2. Instale as dependências:
